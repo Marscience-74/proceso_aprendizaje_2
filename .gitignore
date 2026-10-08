@@ -1,0 +1,5 @@
+# Dependencias (usar npm i)
+node_modules/
+
+# Variables de entorno
+.env
