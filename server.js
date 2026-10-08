@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const connectDB = require('./config/db')
 
+const notFound = require('./src/middlewares/notFound');
+
 app.use(express.json())
 
 async function iniciarServer() {
@@ -23,3 +25,6 @@ iniciarServer()
 app.get('/estado', (req, res) => {
     res.send({ estado: 'OK' })
 })
+
+
+app.use(notFound)
